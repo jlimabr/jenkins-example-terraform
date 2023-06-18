@@ -1,8 +1,8 @@
 pipeline {
     agent any
-    //tools {
-    //    "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform"
-    //}
+    tools {
+        "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform"
+    }
     parameters {
         string(name: 'WORKSPACE', defaultValue: 'DEV', description:'workspace to use in Terraform')
     }
